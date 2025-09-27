@@ -1,9 +1,11 @@
 @charset "UTF-8";
 
 body{
-    background-color: rgb(33, 32, 32);
+    background-color: #262626;
 }
 
-.interface h1{
-    color: white;
+.interface{
+    color:#A66086;
+    margin-top: 100px;
+    margin-left: 30px;
 }
