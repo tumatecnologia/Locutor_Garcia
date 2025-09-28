@@ -13,12 +13,12 @@
 }
 
 body {
-    background-color: #262626;
+    background-color:rgb(227, 83, 177);
     min-height: 100vh;
 }
 .principal{
     border: 1px solid white;
-    background-color:#D991C0;
+    background-color:#262626;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -53,7 +53,7 @@ body {
     font-family: "Bodoni Moda", serif;
     font-size: clamp(24px, 5vw, 32px); /* Tamanho responsivo */
     color: #2c011d;
-    margin: 50px 0px 10px 0;
+    margin: 40px 0px 10px 0;
     font-weight: bolder;
     text-shadow: 4px 4px 5px hsl(322, 93%, 90%);
 }
@@ -76,7 +76,7 @@ body {
     min-height: 45px;
     list-style: none;
     padding: 10px;
-    margin: 10px auto;
+    margin: -10px auto;
     background-color: #40012A;
     width: 95%;
     max-width: 1200px;
