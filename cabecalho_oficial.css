@@ -16,6 +16,7 @@ body {
     background-color:rgb(227, 83, 177);
     min-height: 100vh;
 }
+/*ABAIXO CONFIGURO O SEGUNDO BODY CINZA ANTES DO CONTAINER*/
 .principal{
     border: 1px solid white;
     background-color:#262626;
@@ -95,6 +96,7 @@ body {
     transition: all 0.3s ease;
     display: block;
     white-space: nowrap; /* Impede quebra de texto */
+    font-size:x-large;
 }
 
 .menu a:hover {
@@ -102,6 +104,42 @@ body {
     background-color: #D991C0;
     transform: scale(1.05);
 }
+/*ABAIXO ESTOU CONFIGURANDO O ASIDE LADO ESQUERDO DO SITE*/
+
+.esquerdo{
+    border-right: 1px dotted white;
+    width: 40%;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height:100vh ;
+}
+
+/*ABAIXO ESTOU CONFIGURANDO QUEM SOU EU E O PARAGRAFO DE APRESENTAÇÃO DO FERNANDO*/
+article h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: #D991C0;
+    text-align: justify;
+    font-size: 26px;
+    margin-left: 10px;
+    margin-top: 50px;
+    font-weight: bold;
+
+}
+article p{
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-indent: 10px;
+    padding: 20px;
+
+}
+
+
+
 
 /* MEDIA QUERIES PARA RESPONSIVIDADE */
 
