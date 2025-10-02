@@ -136,6 +136,7 @@ body {
     width: 50%;
     margin-top: 10px;
     padding: 10px;
+    float: left;
 }
 
 /* SEÇÃO SOBRE MIM */
@@ -156,21 +157,23 @@ body {
 .conteudo-lateral {
     display: flex;
     align-items: flex-start;
-    gap: 25px;
-    padding: 0 20px;
-    flex-wrap: wrap;
-    text-align: center;
+    gap: 20px;
+    padding: 0 15px;
+    flex-wrap: nowrap; /* IMPEDE QUEBRA DE LINHA */
 }
 
 .fernando_index {
     flex-shrink: 0;
     margin-top: 0;
     box-shadow: 10px 10px 10px #40012A;
+    min-width: 120px; /* LARGURA MÍNIMA PARA A IMAGEM */
 }
 
 .fernando_index img {
-    width: 180px;
-    height: 180px;
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    min-height: 180px;
     border-radius: 8px;
     object-fit: cover;
 }
@@ -184,7 +187,25 @@ body {
     margin: 0;
     padding: 0;
     flex: 1;
-    min-width: 250px;
+    min-width: 150px; /* LARGURA MÍNIMA PARA O TEXTO */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* CONTEÚDO LADO DIREITO */
+.direito {
+    width: 48%;
+    margin-top: 10px;
+    padding: 10px;
+    float: left;
+    margin-left: 2%;
+}
+
+/* CLEARFIX */
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* RODAPÉ */
@@ -260,12 +281,21 @@ footer p {
     
     .conteudo-lateral {
         padding: 0 15px;
-        gap: 20px;
+        gap: 15px;
+    }
+    
+    .fernando_index {
+        min-width: 100px;
     }
     
     .fernando_index img {
-        width: 130px;
-        height: 130px;
+        max-width: 130px;
+        min-height: 130px;
+    }
+    
+    .sobre_min p {
+        font-size: clamp(14px, 2.5vw, 16px);
+        min-width: 120px;
     }
 }
 
@@ -289,6 +319,7 @@ footer p {
     
     .cabecalho p {
         text-align: center;
+        margin-right: 0;
     }
     
     .menu {
@@ -300,19 +331,32 @@ footer p {
         margin: 0 5px;
     }
     
+    .esquerdo {
+        width: 100%;
+        float: none;
+        border-right: none;
+        border-bottom: 1px dotted white;
+    }
+    
     .conteudo-lateral {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-wrap: nowrap; /* MANTÉM LADO A LADO */
+        gap: 12px;
+        padding: 0 10px;
+    }
+    
+    .fernando_index {
+        min-width: 90px;
     }
     
     .fernando_index img {
-        width: 120px;
-        height: 120px;
+        max-width: 120px;
+        min-height: 120px;
     }
     
     .sobre_min p {
-        text-align: center;
+        text-align: justify;
+        font-size: clamp(13px, 2vw, 15px);
+        min-width: 100px;
     }
     
     .rodape ul {
@@ -363,13 +407,25 @@ footer p {
     }
     
     .conteudo-lateral {
-        padding: 0 10px;
-        gap: 15px;
+        padding: 0 8px;
+        gap: 10px;
+        flex-wrap: nowrap; /* MANTÉM LADO A LADO */
+    }
+    
+    .fernando_index {
+        min-width: 70px;
     }
     
     .fernando_index img {
-        width: 100px;
-        height: 100px;
+        max-width: 100px;
+        min-height: 100px;
+    }
+    
+    .sobre_min p {
+        font-size: clamp(11px, 1.8vw, 14px);
+        min-width: 80px;
+        line-height: 1.3;
+        text-align: justify;
     }
     
     .rodape ul {
@@ -398,11 +454,22 @@ footer p {
     
     .conteudo-lateral {
         padding: 0 5px;
+        gap: 8px;
+    }
+    
+    .fernando_index {
+        min-width: 60px;
     }
     
     .fernando_index img {
-        width: 80px;
-        height: 80px;
+        max-width: 80px;
+        min-height: 80px;
+    }
+    
+    .sobre_min p {
+        font-size: clamp(10px, 1.6vw, 13px);
+        min-width: 60px;
+        line-height: 1.2;
     }
 }
 
@@ -445,5 +512,52 @@ footer p {
     
     .menu {
         min-height: 35px;
+    }
+}
+
+/* MEDIA QUERIES ESPECÍFICAS PARA MANTER LADO A LADO EM TODAS AS TELAS */
+
+/* Tablets menores (600px a 768px) - ajuste fino */
+@media (max-width: 768px) and (min-width: 601px) {
+    .conteudo-lateral {
+        gap: 15px;
+        padding: 0 12px;
+    }
+    
+    .fernando_index {
+        min-width: 100px;
+    }
+    
+    .fernando_index img {
+        max-width: 110px;
+        min-height: 110px;
+    }
+    
+    .sobre_min p {
+        font-size: clamp(12px, 1.8vw, 14px);
+        min-width: 90px;
+    }
+}
+
+/* Celulares grandes (481px a 600px) */
+@media (max-width: 600px) and (min-width: 481px) {
+    .conteudo-lateral {
+        gap: 10px;
+        padding: 0 8px;
+    }
+    
+    .fernando_index {
+        min-width: 80px;
+    }
+    
+    .fernando_index img {
+        max-width: 90px;
+        min-height: 90px;
+    }
+    
+    .sobre_min p {
+        font-size: clamp(11px, 1.6vw, 13px);
+        min-width: 70px;
+        line-height: 1.2;
     }
 }
