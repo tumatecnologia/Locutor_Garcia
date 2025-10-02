@@ -108,25 +108,71 @@ body {
 
 .esquerdo{
     border-right: 1px dotted white;
-    width: 40%;
+    width: 50%;
     margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    min-height:100vh ;
+    padding: 10px;
+    
 }
 
 /*ABAIXO ESTOU CONFIGURANDO QUEM SOU EU E O PARAGRAFO DE APRESENTAÇÃO DO FERNANDO*/
-article h2{
+/* Container principal do artigo */
+.sobre_min {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo do título (mantendo centralizado) */
+.sobre_min h2 {
     font-family: 'Times New Roman', Times, serif;
     color: #D991C0;
-    text-align: justify;
-    font-size: 26px;
-    margin-left: 10px;
-    margin-top: 50px;
-    font-weight: bold;
-
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
-article p{
+
+/* Container para imagem e parágrafo lado a lado */
+.conteudo-lateral {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 0 20px;
+}
+
+/* Estilo da imagem */
+.fernando_index {
+    flex-shrink: 0;
+    margin-top: 0;
+    box-shadow: 10px 10px 10px #40012A;
+}
+
+.fernando_index img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px; /* Opcional: cantos arredondados */
+    object-fit: cover;
+}
+
+/* Estilo do parágrafo ajustado */
+.sobre_min p {
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    text-align: justify;
+    font-size: 18px;
+    text-indent: 10px;
+    margin: 0;
+    padding: 0;
+    flex: 1; /* Ocupa todo espaço restante */
+}
+
+/* Mantenha seus estilos originais para outros elementos */
+article h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #D991C0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+article p {
     font-family: 'Times New Roman', Times, serif;
     color: whitesmoke;
     text-align: justify;
@@ -135,9 +181,58 @@ article p{
     margin-top: 10px;
     text-indent: 10px;
     padding: 20px;
-
+}
+footer{
+    background-color: #40012A;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin:auto;
+    height: 60px;
+    border-top: 1px solid #A66086;
+    border-bottom: 1px solid #A66086;
 }
 
+
+.rodape{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 450px;
+    gap: 10px;
+    margin-top: -20px;
+}
+.rodape ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    margin-bottom: -10px;
+}
+
+
+.rodape a {
+    color: #D991C0;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.rodape a:hover {
+    color: white;
+    text-decoration: underline;
+} 
+    
+
+ footer p{
+    display: flex;
+    color: aliceblue;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: -40px;
+    margin-left: -400px;
+    gap: 10px;
+ }
 
 
 
