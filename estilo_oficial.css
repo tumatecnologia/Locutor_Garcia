@@ -165,16 +165,16 @@ body {
 .fernando_index {
     flex-shrink: 0;
     margin-top: 0;
-    box-shadow: 10px 10px 10px #40012A;
-    min-width: 120px; /* LARGURA MÍNIMA PARA A IMAGEM */
+    box-shadow: 5px 5px 10px #40012A;
+    min-width: 100px; /* LARGURA MÍNIMA PARA A IMAGEM */
 }
 
 .fernando_index img {
     width: 100%;
-    max-width: 180px;
+    max-width: 130px;
     height: auto;
-    min-height: 180px;
-    border-radius: 8px;
+    min-height: 130px;
+    border-radius: 14px;
     object-fit: cover;
 }
 
