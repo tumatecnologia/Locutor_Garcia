@@ -6,15 +6,15 @@ hgroup h2{
     font-family: 'Times New Roman', Times, serif;
     color: #D991C0;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: clamp(20px, 4vw, 24px);
 }
 
 /*CONFIGURANDO A TAG GERAL DA CRIAÇÃO DO ALBUM*/
 
 ul#album_fotos{
-    width: 700px;
+    width: 600px;
     margin: 0 auto;
     padding: 50px;
     overflow: hidden;
@@ -31,12 +31,14 @@ ul#album_fotos li span{
 
 ul#album_fotos li{
     float: left; /*faz com que as fotos fiquem lado a lado*/
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     margin: 10px;
     border: 5px solid rgb(214, 13, 137);
     background-color: #D991C0;
     box-shadow: 5px 5px 10px #2c011d;
+    
+    
 }
 
 /*COLOCANDO A FOTO DENTRO DE CADA RETANGULO*/
@@ -57,5 +59,11 @@ ul#album_fotos li#foto_05{
     background: url(paginas/imagem/fer_001.png) no-repeat;
 }
 ul#album_fotos li#foto_06{
+    background: url(paginas/imagem/fer_001.png) no-repeat;
+}
+ul#album_fotos li#foto_07{
+    background: url(paginas/imagem/fer_001.png) no-repeat;
+}
+ul#album_fotos li#foto_08{
     background: url(paginas/imagem/fer_001.png) no-repeat;
 }
