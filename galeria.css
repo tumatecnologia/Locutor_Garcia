@@ -1,83 +1,79 @@
 @charset "UTF-8";
 
-/*cores:  #262626 (cinza) , #2c011d(roxo escuro)        */
+/* Cores: #262626 (cinza), #2c011d (roxo escuro) */
 
-hgroup h2{
+hgroup h2 {
     font-family: 'Times New Roman', Times, serif;
     color: #D991C0;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     font-size: clamp(20px, 4vw, 24px);
 }
 
-hgroup p{
+hgroup p {
     font-family: 'Times New Roman', Times, serif;
     color: white;
     text-align: center;
-    margin-left:-40px;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin: 15px 0 10px 0;
     font-size: clamp(20px, 4vw, 24px);
-
 }
 
-/*CONFIGURANDO A TAG GERAL DA CRIAÇÃO DO ALBUM*/
-
-ul#album_fotos{
-    width: 450px;
+/* CONFIGURAÇÃO DO ALBUM - FOTOS LADO A LADO */
+ul#album_fotos {
+    max-width: 450px;
+    width: 100%;
     margin: 0 auto;
     padding: 5px;
     overflow: hidden;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alterado para alinhar à esquerda */
 }
 
-/*ABAIXO ESTOU CONFIGURANDO PARA QUE O TEXTO SPAN FIQUE INVISIVEL*/
-ul#album_fotos li span{
+/* TEXTO SPAN INVISÍVEL */
+ul#album_fotos li span {
     opacity: 0;
-
 }
 
-/*CRIANDO CADA RETANGULO ONDE VAI A FOTO*/
-
-ul#album_fotos li{
-    float: left; /*faz com que as fotos fiquem lado a lado*/
+/* CONFIGURAÇÃO DOS ITENS - MANTÉM LADO A LADO */
+ul#album_fotos li {
     width: 100px;
     height: 100px;
     margin: 10px;
     border: 5px solid rgb(214, 13, 137);
     background-color: #D991C0;
     box-shadow: 5px 5px 10px #2c011d;
-    
-    
+    background-size: cover;
+    background-position: center;
+    /* Flexbox item - já fica lado a lado automaticamente */
 }
 
-/*COLOCANDO A FOTO DENTRO DE CADA RETANGULO*/
-
-ul#album_fotos li#foto_01{
-    background: url(paginas/imagem/fer_180.png) no-repeat;
+/* IMAGENS - CORRIGINDO OS CAMINHOS */
+ul#album_fotos li#foto_01 {
+    background: url(paginas/imagem/fer_180.png) no-repeat center/cover;
 }
-ul#album_fotos li#foto_02{
-    background: url(paginas/imagem/fer_001.png) no-repeat;
+ul#album_fotos li#foto_02 {
+    background: url(paginas/imagem/fer_001.png) no-repeat center/cover;
 }
-ul#album_fotos li#foto_03{
-    background: url(paginas/imagem/fer_001.png) no-repeat;
+ul#album_fotos li#foto_03 {
+    background: url(paginas/imagem/fer_002.png) no-repeat center/cover;
 }
-ul#album_fotos li#foto_04{
-    background: url(paginas/imagem/fer_001.png) no-repeat;
+ul#album_fotos li#foto_04 {
+    background: url(paginas/imagem/fer_003.png) no-repeat center/cover;
 }
-ul#album_fotos li#foto_05{
-    background: url(paginas/imagem/fer_001.png) no-repeat;
+ul#album_fotos li#foto_05 {
+    background: url(paginas/imagem/fer_004.png) no-repeat center/cover;
 }
-ul#album_fotos li#foto_06{
-    background: url(paginas/imagem/fer_001.png) no-repeat;
+ul#album_fotos li#foto_06 {
+    background: url(paginas/imagem/fer_005.png) no-repeat center/cover;
 }
-ul#album_fotos li#foto_07{
-    background: url(paginas/imagem/fer_001.png) no-repeat;
+ul#album_fotos li#foto_07 {
+    background: url(paginas/imagem/fer_006.png) no-repeat center/cover;
 }
-ul#album_fotos li#foto_08{
-    background: url(paginas/imagem/fer_001.png) no-repeat;
+ul#album_fotos li#foto_08 {
+    background: url(paginas/imagem/fer_007.png) no-repeat center/cover;
 }
-ul#album_fotos li#foto_09{
-    background: url(paginas/imagem/fer_001.png) no-repeat;
+ul#album_fotos li#foto_09 {
+    background: url(paginas/imagem/fer_008.png) no-repeat center/cover;
 }
