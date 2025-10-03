@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/*cores:  #262626 (cinza) , #2c011d(roxo escuro)        */
+
+hgroup h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: #D991C0;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: clamp(20px, 4vw, 24px);
+}
+
+/*CONFIGURANDO A TAG GERAL DA CRIAÇÃO DO ALBUM*/
+
+ul#album_fotos{
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+}
+
+/*ABAIXO ESTOU CONFIGURANDO PARA QUE O TEXTO SPAN FIQUE INVISIVEL*/
+ul#album_fotos li span{
+    opacity: 0;
+
+}
+
+/*CRIANDO CADA RETANGULO ONDE VAI A FOTO*/
+
+ul#album_fotos li{
+    float: left; /*faz com que as fotos fiquem lado a lado*/
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 5px solid rgb(214, 13, 137);
+    background-color: #D991C0;
+    box-shadow: 5px 5px 10px #2c011d;
+}
+
+/*COLOCANDO A FOTO DENTRO DE CADA RETANGULO*/
+
+ul#album_fotos li#foto_01{
+    background: url(paginas/imagem/fer_001.png) no-repeat;
+}
+ul#album_fotos li#foto_02{
+    background: url(paginas/imagem/fer_001.png) no-repeat;
+}
+ul#album_fotos li#foto_03{
+    background: url(paginas/imagem/fer_001.png) no-repeat;
+}
+ul#album_fotos li#foto_04{
+    background: url(paginas/imagem/fer_001.png) no-repeat;
+}
+ul#album_fotos li#foto_05{
+    background: url(paginas/imagem/fer_001.png) no-repeat;
+}
+ul#album_fotos li#foto_06{
+    background: url(paginas/imagem/fer_001.png) no-repeat;
+}
