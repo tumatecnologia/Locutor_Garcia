@@ -201,6 +201,14 @@ body {
     margin-left: 2%;
 }
 
+.texto_video h4{
+    align-items: center;
+    border: 5px solid white;
+    background-color: whitesmoke;
+    height: 250px;
+
+
+}
 /* CLEARFIX */
 .container:after {
     content: "";
