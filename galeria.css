@@ -20,11 +20,11 @@ hgroup p {
 
 /* CONFIGURAÇÃO DO ALBUM - FOTOS LADO A LADO */
 ul#album_fotos {
-    max-width: 450px;
+    max-width: 600px;
     width: 100%;
     margin: 0 auto;
     padding: 5px;
-    overflow: hidden;
+    overflow:hidden;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -50,48 +50,47 @@ ul#album_fotos li:hover span{
 
 /* CONFIGURAÇÃO DOS ITENS - MANTÉM LADO A LADO */
 ul#album_fotos li {
-    width: 100px;
-    height: 100px;
+    width: 190px;
+    height: 190px;
     margin: 10px;
     border: 1px solid rgb(214, 13, 137);
     background-color: #D991C0;
     background-size: cover;
     background-position: center;
     /* Flexbox item - já fica lado a lado automaticamente */
-    transition: all 0.3s ease-in; /*faz com que a imagem ao passar o mouse cresça suavemente*/
+    transition: all 1s ease-in; /*faz com que a imagem ao passar o mouse cresça suavemente*/
 }
 
 /*ABAIXO COLOCO O EFEITO PARA QUANDO PASSAR O MOUSE A IMAGEM AUMENTAR DE TAMANHO*/
 ul#album_fotos li:hover{
     padding: 10px;
-    transform: scale(1.5);
+    transform:scale(1.1);
 }
 
 /* IMAGENS - CORRIGINDO OS CAMINHOS */
 ul#album_fotos li#foto_01 {
-    background: url(paginas/imagem/fer_180.png) no-repeat center/cover;
-    background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
-    background-size: 100px 100px;
+    background: url(paginas/imagem/fernando_002.jpg) no-repeat center/cover;
+    /*background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
+    background-size: 130px 130px;
 }
 ul#album_fotos li#foto_01:hover{
-    background-position: 0px 0px;
-    background-size: 150px 150px;
+    background-size: 180px 180px;
+   
 }
 
 ul#album_fotos li#foto_02 {
-    background: url(paginas/imagem/fer_001.png) no-repeat center/cover;
-    background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
-    background-size: 100px 100px;
-}
-ul#album_fotos li#foto_02:hover{
-    background-position: 0px 0px;
+    background: url(paginas/imagem/fernando.jpg) no-repeat center/cover;
     background-size: 150px 150px;
 }
-
+ul#album_fotos li#foto_02:hover{
+    background-position: 50% 50%;
+    
+}
+ 
 ul#album_fotos li#foto_03 {
     background: url(paginas/imagem/fer_002.png) no-repeat center/cover;
     background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
-    background-size: 100px 100px;
+    background-size: 150px 150px;
 }
 ul#album_fotos li#foto_03:hover{
     background-position: 0px 0px;
@@ -101,7 +100,7 @@ ul#album_fotos li#foto_03:hover{
 ul#album_fotos li#foto_04 {
     background: url(paginas/imagem/fer_003.png) no-repeat center/cover;
     background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
-    background-size: 100px 100px;
+    background-size: 150px 150px;
 }
 ul#album_fotos li#foto_04:hover{
     background-position: 0px 0px;
@@ -111,7 +110,7 @@ ul#album_fotos li#foto_04:hover{
 ul#album_fotos li#foto_05 {
     background: url(paginas/imagem/fer_004.png) no-repeat center/cover;
     background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
-    background-size: 100px 100px;
+    background-size: 150px 150px;
 }
 ul#album_fotos li#foto_05:hover{
     background-position: 0px 0px;
@@ -121,7 +120,7 @@ ul#album_fotos li#foto_05:hover{
 ul#album_fotos li#foto_06 {
     background: url(paginas/imagem/fer_005.png) no-repeat center/cover;
     background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
-    background-size: 100px 100px;
+    background-size: 150px 150px;
 }
 ul#album_fotos li#foto_06:hover{
     background-position: 0px 0px;
