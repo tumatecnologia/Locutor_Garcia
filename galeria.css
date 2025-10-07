@@ -2,19 +2,13 @@
 
 /* Cores: #262626 (cinza), #2c011d (roxo escuro) */
 
+/*TRABALHANDO COM O ASIDE ESQUERDO, GALERIA DE FOTOS E TITULO*/
+
 hgroup h2 {
     font-family: 'Times New Roman', Times, serif;
-    color: #D991C0;
+    color:white;
     text-align: center;
     margin: 10px 0;
-    font-size: clamp(20px, 4vw, 24px);
-}
-
-hgroup p {
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    text-align: center;
-    margin: 15px 0 10px 0;
     font-size: clamp(20px, 4vw, 24px);
 }
 
@@ -28,8 +22,9 @@ ul#album_fotos {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Alterado para alinhar à esquerda */
+    justify-content: centro; /* Alterado para alinhar ao centro */
     align-content: center;
+    -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos móveis */
 }
 
 /* TEXTO SPAN INVISÍVEL */
@@ -119,4 +114,64 @@ ul#album_fotos li#foto_06:hover{
     border-radius: 10%;
    
 }
+/*==============================================================================*/
+/*ABAIXO ESTOU CONFIGURANDO O ASIDE DIREITO, GALERIA DE VIDEOS E TITULOS*/
 
+.titulo_video h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+    font-size: clamp(20px, 4vw, 24px);
+}
+
+.direito h4{
+    margin-top: 30px;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+/* CONFIGURAÇÃO DO ALBUM - videos LADO A LADO */
+ul#album_videos {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+    overflow:hidden;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alterado para alinhar ao centro */
+    align-content: center;
+    -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos móveis */
+}
+
+/* TEXTO SPAN INVISÍVEL */
+ul#album_videos li span {
+    opacity:0;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: rgba(192, 189, 191,0.3);
+    align-content: center;
+}
+/*ABAIXO CONFIGURO A VISIBILIDADE DO SPAN DA GALERIA DE videos APOS O MOUSE PASSAR PELA IMAGEM*/
+
+ul#album_videos li:hover span{
+    opacity: 1;
+}
+
+/* CONFIGURAÇÃO DOS ITENS - MANTÉM LADO A LADO */
+ul#album_videos li {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid rgb(214, 13, 137);
+    border-radius: 10%;
+    background-size: cover;
+    background-position: center;
+    /* Flexbox item - já fica lado a lado automaticamente */
+    
+}

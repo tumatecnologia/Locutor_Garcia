@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+
+
+
+.centro{
+    display: block;
+    border: 1px solid black;
+    border-radius: 10%;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+}   
+
+.centro h4{
+    
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
