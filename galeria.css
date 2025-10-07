@@ -70,7 +70,7 @@ ul#album_fotos li:hover{
 
 /* IMAGENS - CORRIGINDO OS CAMINHOS */
 ul#album_fotos li#foto_01 {
-    background: url(paginas/imagem/fernando_002.jpg) no-repeat center/cover;
+    background: url(paginas/imagem/fernando_001.jpg) no-repeat center/cover;
     /*background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
     background-size: 130px 130px;
 }
@@ -79,7 +79,7 @@ ul#album_fotos li#foto_01:hover{
     border-radius: 10%;   
 }
 ul#album_fotos li#foto_02 {
-    background: url(paginas/imagem/fernando.jpg) no-repeat center/cover;
+    background: url(paginas/imagem/fernando_002.jpg) no-repeat center/cover;
     background-size: 130px 130px;
 }
 ul#album_fotos li#foto_02:hover{
