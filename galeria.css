@@ -35,7 +35,7 @@ ul#album_fotos {
 /* TEXTO SPAN INVISÍVEL */
 ul#album_fotos li span {
     opacity:0;
-    color: rgba(41, 1, 26,0.7);
+    color: white;
     font-size: 12px;
     padding: 5px;
     font-weight: bold;
@@ -54,6 +54,7 @@ ul#album_fotos li {
     height: 190px;
     margin: 10px;
     border: 1px solid rgb(214, 13, 137);
+    border-radius: 10%;
     background-color: #D991C0;
     background-size: cover;
     background-position: center;
@@ -75,55 +76,47 @@ ul#album_fotos li#foto_01 {
 }
 ul#album_fotos li#foto_01:hover{
     background-size: 180px 180px;
-   
+    border-radius: 10%;   
 }
-
 ul#album_fotos li#foto_02 {
     background: url(paginas/imagem/fernando.jpg) no-repeat center/cover;
-    background-size: 150px 150px;
+    background-size: 130px 130px;
 }
 ul#album_fotos li#foto_02:hover{
-    background-position: 50% 50%;
-    
+    background-size: 180px 180px;
+    border-radius: 10%;       
 }
- 
 ul#album_fotos li#foto_03 {
-    background: url(paginas/imagem/fer_002.png) no-repeat center/cover;
-    background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
-    background-size: 150px 150px;
+    background: url(paginas/imagem/fernando_003.jpg) no-repeat center/cover;
+    background-size: 130px 130px;
 }
 ul#album_fotos li#foto_03:hover{
-    background-position: 0px 0px;
-    background-size: 150px 150px;
+    background-size: 180px 180px;
+    border-radius: 10%; 
 }
-
 ul#album_fotos li#foto_04 {
-    background: url(paginas/imagem/fer_003.png) no-repeat center/cover;
-    background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
-    background-size: 150px 150px;
+    background: url(paginas/imagem/fernando_004.jpg) no-repeat center/cover;
+    background-size: 130px 130px;
 }
 ul#album_fotos li#foto_04:hover{
-    background-position: 0px 0px;
-    background-size: 150px 150px;
+    background-size: 180px 180px;
+    border-radius: 10%;
 }
-
 ul#album_fotos li#foto_05 {
-    background: url(paginas/imagem/fer_004.png) no-repeat center/cover;
-    background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
-    background-size: 150px 150px;
+    background: url(paginas/imagem/fernando_005.jpg) no-repeat center/cover;
+    background-size: 130px 130px;
 }
 ul#album_fotos li#foto_05:hover{
-    background-position: 0px 0px;
-    background-size: 150px 150px;
+    background-size: 180px 180px;
+    border-radius: 10%;
 }
-
 ul#album_fotos li#foto_06 {
-    background: url(paginas/imagem/fer_005.png) no-repeat center/cover;
-    background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
-    background-size: 150px 150px;
+    background: url(paginas/imagem/fernando_006.jpg) no-repeat center/cover;
+    background-size: 130px 130px;
 }
 ul#album_fotos li#foto_06:hover{
-    background-position: 0px 0px;
-    background-size: 150px 150px;
+    background-size: 180px 180px;
+    border-radius: 10%;
+   
 }
 
