@@ -202,13 +202,10 @@ body {
     text-align: center;
 }
 
-.texto_video h4{
+.titulo h4{
     align-items: center;
-    border: 5px solid white;
-    background-color: whitesmoke;
-    height: 250px;
-
-
+    height: 30px;
+    color: white;
 }
 /* CLEARFIX */
 .container:after {

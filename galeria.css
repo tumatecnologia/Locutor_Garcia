@@ -149,20 +149,13 @@ ul#album_videos {
 
 /* TEXTO SPAN INVISÍVEL */
 ul#album_videos li span {
-    opacity:0;
     color: white;
     font-size: 12px;
     padding: 5px;
     font-weight: bold;
     background-color: rgba(192, 189, 191,0.3);
-    align-content: center;
+    align-items: center;
 }
-/*ABAIXO CONFIGURO A VISIBILIDADE DO SPAN DA GALERIA DE videos APOS O MOUSE PASSAR PELA IMAGEM*/
-
-ul#album_videos li:hover span{
-    opacity: 1;
-}
-
 /* CONFIGURAÇÃO DOS ITENS - MANTÉM LADO A LADO */
 ul#album_videos li {
     width: 150px;
