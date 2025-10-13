@@ -1,183 +1,346 @@
 @charset "UTF-8";
 
-/* Cores: #262626 (cinza), #2c011d (roxo escuro) */
-
-/*TRABALHANDO COM O ASIDE ESQUERDO, GALERIA DE FOTOS E TITULO*/
-
-hgroup h2 {
+/* CONFIGURAÇÕES GERAIS DA GALERIA */
+hgroup h2, .titulo_video h2 {
     font-family: 'Times New Roman', Times, serif;
-    color:white;
+    color: white;
     text-align: center;
     margin: 10px 0;
     font-size: clamp(20px, 4vw, 24px);
 }
 
-/* CONFIGURAÇÃO DO ALBUM - FOTOS LADO A LADO */
-ul#album_fotos {
-    max-width: 600px;
+/* CONTAINER PRINCIPAL RESPONSIVO */
+ul#album_fotos, ul#album_videos {
     width: 100%;
     margin: 0 auto;
-    padding: 5px;
-    overflow:hidden;
+    padding: 15px;
+    overflow: hidden;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: centro; /* Alterado para alinhar ao centro */
-    align-content: center;
-    -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos móveis */
+    justify-content: center;
+    align-items: center; /* Melhor alinhamento */
+    -webkit-overflow-scrolling: touch;
+    gap: 25px;
+    max-width: 900px;
 }
 
-/* TEXTO SPAN INVISÍVEL */
-ul#album_fotos li span {
-    opacity:0;
-    color: white;
-    font-size: 12px;
-    padding: 5px;
-    font-weight: bold;
-    background-color: rgba(192, 189, 191,0.3);
-    align-content: center;
-}
-/*ABAIXO CONFIGURO A VISIBILIDADE DO SPAN DA GALERIA DE IMAGEM APOS O MOUSE PASSAR PELA IMAGEM*/
-
-ul#album_fotos li:hover span{
-    opacity: 1;
-}
-
-/* CONFIGURAÇÃO DOS ITENS - MANTÉM LADO A LADO */
+/* ITENS DA GALERIA - ALINHAMENTO PERFEITO */
 ul#album_fotos li {
-    width: 190px;
-    height: 190px;
-    margin: 10px;
+    width: 250px;
+    height: 250px;
+    margin: 0;
     border: 1px solid rgb(214, 13, 137);
     border-radius: 10%;
     background-color: #D991C0;
     background-size: cover;
     background-position: center;
-    /* Flexbox item - já fica lado a lado automaticamente */
-    transition: all 1s ease-in; /*faz com que a imagem ao passar o mouse cresça suavemente*/
-}
-
-/*ABAIXO COLOCO O EFEITO PARA QUANDO PASSAR O MOUSE A IMAGEM AUMENTAR DE TAMANHO*/
-ul#album_fotos li:hover{
-    padding: 10px;
-    transform:scale(1.1);
-}
-
-/* IMAGENS - CORRIGINDO OS CAMINHOS */
-ul#album_fotos li#foto_01 {
-    background: url(paginas/imagem/fernando_001.jpg) no-repeat center/cover;
-    /*background-position: 50% 50%; /*POSICIONA A IMAGEM DENTRO DO BLOCO*/
-    background-size: 130px 130px;
-}
-ul#album_fotos li#foto_01:hover{
-    background-size: 180px 180px;
-    border-radius: 10%;   
-}
-ul#album_fotos li#foto_02 {
-    background: url(paginas/imagem/fernando_002.jpg) no-repeat center/cover;
-    background-size: 130px 130px;
-}
-ul#album_fotos li#foto_02:hover{
-    background-size: 180px 180px;
-    border-radius: 10%;       
-}
-ul#album_fotos li#foto_03 {
-    background: url(paginas/imagem/fernando_003.jpg) no-repeat center/cover;
-    background-size: 130px 130px;
-}
-ul#album_fotos li#foto_03:hover{
-    background-size: 180px 180px;
-    border-radius: 10%; 
-}
-ul#album_fotos li#foto_04 {
-    background: url(paginas/imagem/fernando_004.jpg) no-repeat center/cover;
-    background-size: 130px 130px;
-}
-ul#album_fotos li#foto_04:hover{
-    background-size: 180px 180px;
-    border-radius: 10%;
-}
-ul#album_fotos li#foto_05 {
-    background: url(paginas/imagem/fernando_005.jpg) no-repeat center/cover;
-    background-size: 130px 130px;
-}
-ul#album_fotos li#foto_05:hover{
-    background-size: 180px 180px;
-    border-radius: 10%;
-}
-ul#album_fotos li#foto_06 {
-    background: url(paginas/imagem/fernando_006.jpg) no-repeat center/cover;
-    background-size: 130px 130px;
-}
-ul#album_fotos li#foto_06:hover{
-    background-size: 180px 180px;
-    border-radius: 10%;
-   
-}
-/*==============================================================================*/
-/*ABAIXO ESTOU CONFIGURANDO O ASIDE DIREITO, GALERIA DE VIDEOS E TITULOS*/
-
-.titulo_video h2 {
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    text-align: center;
-    margin: 10px 0;
-    font-size: clamp(20px, 4vw, 24px);
-}
-
-.direito h4{
-    margin-top: 30px;
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-}
-
-/* CONFIGURAÇÃO DO ALBUM - videos LADO A LADO */
-ul#album_videos {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 5px;
-    overflow:hidden;
-    list-style: none;
+    transition: all 0.3s ease-in;
+    flex-shrink: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Alterado para alinhar ao centro */
-    align-content: center;
-    -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos móveis */
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha o span na base */
+    align-items: center;
+    text-align: center;
 }
 
-/* TEXTO SPAN INVISÍVEL */
-ul#album_videos li span {
-    color: white;
-    font-size: 12px;
-    padding: 10px;
-    font-weight: bold;
-    background-color: rgba(192, 189, 191,0.3);
-    align-items: center;
-       
-}
-/* CONFIGURAÇÃO DOS ITENS - MANTÉM LADO A LADO */
 ul#album_videos li {
-    width: 150px;
-    height: 180px;
-    margin: 15px;
-    /*border: 1px solid rgb(214, 13, 137);*/
+    width: 220px;
+    height: 260px;
+    margin: 0;
     border-radius: 10%;
     background-size: cover;
     background-position: center;
-    padding: 10px;
-    
+    padding: 15px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Melhor distribuição */
+    align-items: center;
+    text-align: center;
+}
 
-    /* Flexbox item - já fica lado a lado automaticamente */
-    
-}
-ul#album_videos img{
+/* IMAGENS DENTRO DOS VÍDEOS */
+ul#album_videos img {
+    width: 100%;
+    height: auto;
     border-radius: 15%;
-    
+    aspect-ratio: 1;
+    object-fit: cover;
 }
-h4{
+
+/* TEXTO SPAN RESPONSIVO */
+ul#album_fotos li span, ul#album_videos li span {
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    font-weight: bold;
+    background-color: rgba(192, 189, 191, 0.3);
+    text-align: center;
+    display: block;
+    width: 100%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+ul#album_fotos li span {
+    opacity: 0;
+}
+
+ul#album_videos li span {
+    opacity: 1;
+}
+
+/* HOVER EFFECTS */
+ul#album_fotos li:hover span {
+    opacity: 1;
+}
+
+ul#album_fotos li:hover {
+    transform: scale(1.08);
+    z-index: 10;
+}
+
+/* BACKGROUNDS DAS FOTOS */
+ul#album_fotos li#foto_01 { background: url(paginas/imagem/fernando_001.jpg) no-repeat center/cover; }
+ul#album_fotos li#foto_02 { background: url(paginas/imagem/fernando_002.jpg) no-repeat center/cover; }
+ul#album_fotos li#foto_03 { background: url(paginas/imagem/fernando_003.jpg) no-repeat center/cover; }
+ul#album_fotos li#foto_04 { background: url(paginas/imagem/fernando_004.jpg) no-repeat center/cover; }
+ul#album_fotos li#foto_05 { background: url(paginas/imagem/fernando_005.jpg) no-repeat center/cover; }
+ul#album_fotos li#foto_06 { background: url(paginas/imagem/fernando_006.jpg) no-repeat center/cover; }
+
+/* MEDIA QUERIES OTIMIZADAS - CONSISTENTES */
+
+/* TELAS MUITO GRANDES (acima de 1440px) - 3 COLUNAS */
+@media (min-width: 1441px) {
+    ul#album_fotos, ul#album_videos {
+        max-width: 1200px;
+        gap: 25px;
+    }
+    
+    ul#album_fotos li {
+        width: 220px;
+        height: 220px;
+    }
+    
+    ul#album_videos li {
+        width: 200px;
+        height: 240px;
+    }
+}
+
+/* NOTEBOOKS (1025px - 1440px) - 2 COLUNAS CONSISTENTES */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    ul#album_fotos, ul#album_videos {
+        max-width: 800px;
+        gap: 25px;
+    }
+    
+    ul#album_fotos li {
+        width: 200px;
+        height: 200px;
+    }
+    
+    ul#album_videos li {
+        width: 180px;
+        height: 200px;
+    }
+}
+
+/* TABLETS GRANDES (769px - 1024px) - 2 COLUNAS */
+@media (max-width: 1024px) and (min-width: 769px) {
+    ul#album_fotos, ul#album_videos {
+        max-width: 700px;
+        gap: 20px;
+    }
+    
+    ul#album_fotos li {
+        width: 190px;
+        height: 190px;
+    }
+    
+    ul#album_videos li {
+        width: 170px;
+        height: 190px;
+    }
+}
+
+/* TABLETS ANDROID/iOS LANDSCAPE */
+@media (max-width: 1024px) and (orientation: landscape) {
+    ul#album_fotos, ul#album_videos {
+        max-width: 900px;
+        gap: 15px;
+    }
+    
+    ul#album_fotos li {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+/* IPADS */
+@media (width: 768px) and (height: 1024px) {
+    ul#album_fotos, ul#album_videos {
+        max-width: 700px;
+    }
+    
+    ul#album_fotos li {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* TABLETS PEQUENOS (601px - 768px) - 2 COLUNAS */
+@media (max-width: 768px) and (min-width: 601px) {
+    ul#album_fotos, ul#album_videos {
+        max-width: 600px;
+        gap: 15px;
+    }
+    
+    ul#album_fotos li {
+        width: 180px;
+        height: 180px;
+    }
+    
+    ul#album_videos li {
+        width: 160px;
+        height: 190px;
+    }
+}
+
+/* CELULARES GRANDES (481px - 600px) - 2 COLUNAS */
+@media (max-width: 600px) and (min-width: 481px) {
+    ul#album_fotos, ul#album_videos {
+        max-width: 500px;
+        gap: 12px;
+    }
+    
+    ul#album_fotos li {
+        width: 150px;
+        height: 150px;
+    }
+    
+    ul#album_videos li {
+        width: 140px;
+        height: 170px;
+    }
+}
+
+/* DISPOSITIVOS MÓVEIS COM TELAS ALTAS (iPhone X/14, Samsung S系列) */
+@media (max-width: 480px) and (min-height: 700px) {
+    ul#album_fotos li {
+        width: 150px;
+        height: 150px;
+    }
+    
+    ul#album_videos li {
+        width: 140px;
+        height: 160px;
+    }
+}
+
+/* CELULARES PEQUENOS (até 480px) - 2 COLUNAS */
+@media (max-width: 480px) {
+    ul#album_fotos, ul#album_videos {
+        max-width: 400px;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    ul#album_fotos li {
+        width: 140px;
+        height: 140px;
+    }
+    
+    ul#album_videos li {
+        width: 130px;
+        height: 160px;
+        padding: 8px;
+    }
+}
+
+/* IPHONES MAIS ANTIGOS (SE/6/7/8) */
+@media (max-width: 375px) {
+    ul#album_fotos, ul#album_videos {
+        max-width: 350px;
+        gap: 8px;
+    }
+    
+    ul#album_fotos li {
+        width: 130px;
+        height: 130px;
+    }
+    
+    ul#album_videos li {
+        width: 120px;
+        height: 140px;
+        padding: 6px;
+    }
+}
+
+/* TELAS MUITO PEQUENAS (até 320px) - 1 COLUNA */
+@media (max-width: 320px) {
+    ul#album_fotos, ul#album_videos {
+        max-width: 300px;
+        gap: 15px;
+    }
+    
+    ul#album_fotos li {
+        width: 160px;
+        height: 160px;
+    }
+    
+    ul#album_videos li {
+        width: 150px;
+        height: 180px;
+    }
+}
+
+/* SPAN OTIMIZADO PARA MOBILE */
+@media (max-width: 768px) {
+    ul#album_fotos li span, ul#album_videos li span {
+        font-size: 12px;
+        padding: 6px;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* SPAN SEMPRE VISÍVEL EM MOBILE (melhor UX) */
+@media (max-width: 480px) {
+    ul#album_fotos li span {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* Melhorias para dispositivos touch */
+@media (hover: none) {
+    ul#album_fotos li:hover, ul#album_videos li:hover {
+        transform: none;
+    }
+    
+    ul#album_fotos li:active, ul#album_videos li:active {
+        transform: scale(0.95);
+    }
+    
+    ul#album_fotos li span, ul#album_videos li span {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* Outros elementos */
+.direito h4 {
+    margin-top: 30px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(16px, 3vw, 18px);
+    text-align: center;
+}
+
+h4 {
     margin: 20px;
     padding: 20px;
     text-align: center;
+    font-size: clamp(14px, 2.5vw, 16px);
 }
