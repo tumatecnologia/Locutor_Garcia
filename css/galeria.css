@@ -102,12 +102,12 @@ ul#album_fotos li:hover {
 }
 
 /* BACKGROUNDS DAS FOTOS */
-ul#album_fotos li#foto_01 { background: url(paginas/imagem/fernando_001.jpg) no-repeat center/cover; }
-ul#album_fotos li#foto_02 { background: url(paginas/imagem/fernando_002.jpg) no-repeat center/cover; }
-ul#album_fotos li#foto_03 { background: url(paginas/imagem/fernando_003.jpg) no-repeat center/cover; }
-ul#album_fotos li#foto_04 { background: url(paginas/imagem/fernando_004.jpg) no-repeat center/cover; }
-ul#album_fotos li#foto_05 { background: url(paginas/imagem/fernando_005.jpg) no-repeat center/cover; }
-ul#album_fotos li#foto_06 { background: url(paginas/imagem/fernando_006.jpg) no-repeat center/cover; }
+ul#album_fotos li#foto_01 { background: url(../paginas/imagem/fernando_001.jpg) no-repeat center/cover; }
+ul#album_fotos li#foto_02 { background: url(../paginas/imagem/fernando_002.jpg) no-repeat center/cover; }
+ul#album_fotos li#foto_03 { background: url(../paginas/imagem/fernando_003.jpg) no-repeat center/cover; }
+ul#album_fotos li#foto_04 { background: url(../paginas/imagem/fernando_004.jpg) no-repeat center/cover; }
+ul#album_fotos li#foto_05 { background: url(../paginas/imagem/fernando_005.jpg) no-repeat center/cover; }
+ul#album_fotos li#foto_06 { background: url(../paginas/imagem/fernando_006.jpg) no-repeat center/cover; }
 
 /* MEDIA QUERIES OTIMIZADAS - CONSISTENTES */
 
